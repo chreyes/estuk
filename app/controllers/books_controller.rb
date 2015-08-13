@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
+  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  respond_to :html
 
   # GET /books
   # GET /books.json
@@ -27,7 +29,7 @@ class BooksController < ApplicationController
     @book = current_user.books.new(book_params)
 
     @book.save
-    	respond_with(@book)
+    respond_with(@book)
   end
 
   # PATCH/PUT /books/1
