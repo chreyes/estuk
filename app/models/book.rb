@@ -8,6 +8,6 @@ class Book < ActiveRecord::Base
 	has_attached_file :image
 	has_attached_file :resource
 
-	validates_numericallity_of :price,
+	validates_numericality_of :price,
 	greater_than: 49, message: 'must be greatear than 50 cents' 	
 end
