@@ -50,4 +50,4 @@ gem 'cancan'
 gem 'paperclip'
 gem 'dotenv-rails', groups: [:development]
 gem 'friendly_id'
-gem 'stripe'
+gem 'stripe', git: 'https://github.com/stripe/stripe-ruby'
